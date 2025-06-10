@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  </head>
+  <body class="container mt-5">
+    <h2>Register</h2>
+
+    <!-- Display Success or Error Message -->
+    <% if (typeof successMessage !== 'undefined') { %>
+    <div class="alert alert-success"><%= successMessage %></div>
+    <% } %> <% if (typeof errorMessage !== 'undefined') { %>
+    <div class="alert alert-danger"><%= errorMessage %></div>
+    <% } %>
+
+    <!-- Registration Form -->
+    <form action="/register" method="POST">
+      <div class="mb-3">
+        <label for="userFullName" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="userFullName"
+          id="userFullName"
+          required
+          autocomplete="off" />
+      </div>
+      <div class="mb-3">
+        <label for="userName" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          name="userName"
+          id="userName"
+          required
+          autocomplete="off" />
+      </div>
+      <div class="mb-3">
+        <label for="userPassword" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="userPassword"
+          id="userPassword"
+          required
+          autocomplete="off" />
+      </div>
+      <div class="mb-3">
+        <label for="userDivision" class="form-label">Division</label>
+        <select id="userDivision" name="userDivision" class="form-select">
+          <option value="">Select a division</option>
+          <option value="1">BMC</option>
+          <option value="2">PLANT B</option>
+          <option value="3">PLANT C</option>
+          <option value="4">PRODUCTION TECHNIC</option>
+          <option value="5">UTILITY</option>
+          <option value="6">PLANNING</option>
+          <option value="7">LOGISTICS</option>
+          <option value="8">SAFETY & ISI</option>
+          <option value="9">QA</option>
+          <option value="10">PURCHASE</option>
+          <option value="11">TECHNICAL-I</option>
+          <option value="12">FACTORY MANAGEMENT</option>
+          <option value="13">ACCOUNTING & LEGAL</option>
+          <option value="14">HR & GA OFFICE</option>
+          <option value="15">INFORMATION TECH.</option>
+          <option value="16">TECHNICAL CENTER-I</option>
+          <option value="17">SSC</option>
+          <option value="18">HR & GA FACTORY</option>
+          <option value="19">SALES DIVISION</option>
+          <option value="20">OFFICE MANAGEMENT</option>
+          <option value="21">MAINTENANCE</option>
+          <option value="22">IMS</option>
+          <option value="23">Analysis_AP</option>
+          <option value="24">OHS&E</option>
+          <option value="25">PRESIDENT</option>
+          <option value="26">Senior Manager</option>
+          <option value="27">
+            Japanese Advisor / General Manager / Factory Manager
+          </option>
+          <option value="28">Director</option>
+          <option value="29">ANALYSIS</option>
+          <option value="30">TECHNICAL-II</option>
+          <option value="31">TECHNICAL CENTER-II</option>
+          <option value="32">LOGISTICS-Delivery</option>
+          <option value="33">LOGISTICS-Packaging</option>
+          <option value="34">LOGISTICS-Warehouse</option>
+          <option value="35">QA & ANALYSIS</option>
+        </select>
+      </div>
+      <input type="hidden" name="userPermission" value="1" />
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </body>
+</html>

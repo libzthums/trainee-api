@@ -1,0 +1,5 @@
+# dependencies
+/node_modules
+/document
+/file
+/upload/ServiceDocument/
